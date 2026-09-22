@@ -20,7 +20,7 @@ const quickSkills = [
 function ProfileAvatar({ name }) {
   const [imageFailed, setImageFailed] = useState(false);
   if (imageFailed) return <div className="profile-avatar-fallback" role="img" aria-label={`${name} initials avatar`}><span>AG</span><small>Web Developer</small></div>;
-  return <img src="/images/profile.jpg" alt={name} onError={() => setImageFailed(true)} />;
+  return <img src={`${import.meta.env.BASE_URL}images/me.jpg`} alt={name} onError={() => setImageFailed(true)} />;
 }
 
 function ResumeButton() {
